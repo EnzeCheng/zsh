@@ -4,3 +4,5 @@
 alias jnply='ssh -N -L localhost:8888:localhost:8887 plymouth'
 
 # Modified Aliases:
+
+alias lsa='ls -a'
