@@ -1,0 +1,6 @@
+# New Aliases:
+
+# Link remote jupyter notebook on plymouth to local browser
+alias jnply='ssh -N -L localhost:8888:localhost:8887 plymouth'
+
+# Modified Aliases:
