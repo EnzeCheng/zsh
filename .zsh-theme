@@ -4,8 +4,8 @@
 function hg_prompt_info {
     local prompt
     prompt="$(hg prompt --angle-brackets "\
-< on %{%F{174}%}<bookmark>%{$reset_color%}>\
-< %{%F{174}%}(<branch>)%{$reset_color%}>\
+< on %{%F{047}%}<bookmark>%{$reset_color%}>\
+< %{%f{047}%}(<branch>)%{$reset_color%}>\
 < at %{%F{228}%}<tags|%{$reset_color%}, %{%F{228}%}>%{$reset_color%}>\
 %{%F{116}%}<status|modified|unknown><update>%{$reset_color%}<
 patches: <patches|join( → )|pre_applied(%{%F{228}%})|post_applied(%{$reset_color%})|pre_unapplied(%{$fg_bold[black]%})|post_unapplied(%{$reset_color%})>>" 2>/dev/null)"
@@ -16,7 +16,7 @@ patches: <patches|join( → )|pre_applied(%{%F{228}%})|post_applied(%{$reset_col
 }
 
 ##### git prompt, includes tag if any.
-ZSH_THEME_GIT_PROMPT_PREFIX=" on %{%F{174}%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" on %{%F{046}%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{%F{116}%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{%F{116}%}?"
@@ -139,7 +139,7 @@ function _count_tmuxen {
 function _set_prompts {
     # Using prompt_subst sometimes fails to evaluate RPROMPT after SIGINT.
     PROMPT="
-$(_is_ssh_prefix)%{%F{181}%}%n%{%f%b%}%{%F{7}%}$(_is_ssh_prefix)@%{%F{116}%}$(_is_ssh_prefix)$(_box_name)%{%f%b%}$(_return_status):%{%F{223}%}${PWD/#$HOME/~}%{$reset_color%}$(hg_prompt_info)$(git_prompt_info)
+$(_is_ssh_prefix)%{%F{046}%}%n%{%f%b%}%{%F{7}%}$(_is_ssh_prefix)@%{%F{116}%}$(_is_ssh_prefix)$(_box_name)%{%f%b%}$(_return_status):%{%F{223}%}${PWD/#$HOME/~}%{$reset_color%}$(hg_prompt_info)$(git_prompt_info)
 $(_virtualenv_info)$(_prompt_char)${vcs_info_msg_0_} %{%b%F{7}%}"
     RPROMPT="%{$reset_color%}$(vi_mode_prompt_info) %(1j.[jobs: %j] .)$(_count_screens)$(_count_tmuxen)[%D %*]"
 }
