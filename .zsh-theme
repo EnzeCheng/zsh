@@ -98,7 +98,8 @@ precmd_functions+='_report_elapsed_time'
 function _prompt_char {
     if git branch >/dev/null 2>/dev/null; then echo '(git)'
     else if hg root >/dev/null 2>/dev/null; then echo '(hg)'
-    else echo '$'; fi; fi
+    else if [[ -n $SSH_CLIENT ]]; then echo '(ssh)'
+    else echo '$'; fi; fi; fi
 }
 
 function _virtualenv_info {
