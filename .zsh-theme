@@ -4,8 +4,8 @@
 function hg_prompt_info {
     local prompt
     prompt="$(hg prompt --angle-brackets "\
-< on %{%F{047}%}<bookmark>%{$reset_color%}>\
-< %{%f{047}%}(<branch>)%{$reset_color%}>\
+< on %{%F{174}%}<bookmark>%{$reset_color%}>\
+< %{%f{174}%}(<branch>)%{$reset_color%}>\
 < at %{%F{228}%}<tags|%{$reset_color%}, %{%F{228}%}>%{$reset_color%}>\
 %{%F{116}%}<status|modified|unknown><update>%{$reset_color%}<
 patches: <patches|join( → )|pre_applied(%{%F{228}%})|post_applied(%{$reset_color%})|pre_unapplied(%{$fg_bold[black]%})|post_unapplied(%{$reset_color%})>>" 2>/dev/null)"
@@ -16,7 +16,7 @@ patches: <patches|join( → )|pre_applied(%{%F{228}%})|post_applied(%{$reset_col
 }
 
 ##### git prompt, includes tag if any.
-ZSH_THEME_GIT_PROMPT_PREFIX=" on %{%F{046}%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" on %{%F{174}%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{%F{116}%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{%F{116}%}?"
