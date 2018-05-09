@@ -51,7 +51,7 @@ PR_GIT_UPDATE=1
 # called before command excution
 # here we decide if we should update the prompt next time
 function zsh_git_prompt_preexec {
-    case "$(history $HISTCMD)" in
+    case "$2" in
         *git*)
             PR_GIT_UPDATE=1
             ;;
