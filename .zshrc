@@ -86,8 +86,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-# Get a GUI environment on a remote server
-export DISPLAY=localhost:10.0
+# Get a GUI environment on a remote server(Only for windows)
+# export DISPLAY=localhost:10.0
 
 # Set zsh Theme
 source ~/.zsh-theme
